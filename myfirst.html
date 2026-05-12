@@ -4,7 +4,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CollegeEventDesk</title>
+
+    <!-- Font Awesome Icons -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fefae0;
+            color: #333;
+        }
+
+        /* Header */
+
+        header{
+            background-color: #2a9d8f;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1{
+            color: white;
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        header p{
+            color: #f1f1f1;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        header img{
+            width: 90px;
+            border-radius: 10px;
+        }
+
+        /* Navigation */
+
+        nav{
+            background-color: #264653;
+            padding: 15px;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li{
+            margin: 0 20px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover{
+            background-color: #f4a261;
+            color: black;
+        }
+
+        /* Sections */
+
+        section{
+            width: 70%;
+            margin: 25px auto;
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        section h2{
+            color: #264653;
+            margin-bottom: 20px;
+        }
+
+        /* Event Cards */
+
+        article{
+            background-color: #fff5ec;
+            border-left: 5px solid #e76f51;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        article h3{
+            color: #2a9d8f;
+            margin-bottom: 10px;
+        }
+
+        article img{
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        .date{
+            font-style: italic;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+
+        #contact p{
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+
+        footer{
+            background-color: #264653;
+            text-align: center;
+            padding: 15px;
+            color: white;
+        }
+
+        footer ul{
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        footer ul li{
+            display: inline;
+            margin: 0 15px;
+        }
+
+        footer ul li a{
+            color: white;
+            font-size: 22px;
+        }
+
+        footer ul li a:hover{
+            color: yellow;
+        }
+
+        footer p{
+            font-size: 14px;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -17,7 +176,7 @@
 
         <p>Your One-Stop Campus Event Hub</p>
 
-        <img src="logo/aurelea .jpeg" alt="College Logo" width="120">
+        <img src="logo/aurelea .jpeg" alt="College Logo">
 
     </header>
 
@@ -26,9 +185,13 @@
     <nav>
 
         <ul>
+
             <li><a href="#about">About</a></li>
+
             <li><a href="#events">Events</a></li>
+
             <li><a href="#contact">Contact</a></li>
+
         </ul>
 
     </nav>
@@ -63,13 +226,22 @@
 
             <h3>Tech Talk: AI in Everyday Life</h3>
 
-            <p>Date: August 15, 2025</p>
+            <img src="logo/ai-in-everyday-life.png" alt="AI Event">
+
+            <p class="date">Date: August 15, 2025</p>
 
             <p>
-                A seminar on AI's impact on industries and daily life.
+                Discover how artificial intelligence is shaping industries such as healthcare,
+                transportation, and education. This session will cover real-world applications
+                and spark discussions on ethical AI usage.
             </p>
 
-            <img src="logo/ai-in-everyday-life.png" alt="AI Event" width="160">
+            <br>
+
+            <p>
+                Industry experts will also share insights into how students can prepare for
+                careers in AI and machine learning.
+            </p>
 
         </article>
 
@@ -79,14 +251,22 @@
 
             <h3>Cultural Fest: Rhythms of India</h3>
 
-            <p>Date: August 20, 2025</p>
+            <img src="logo/rhythms-of-india.png" alt="Cultural Event">
+
+            <p class="date">Date: August 20, 2025</p>
 
             <p>
-                An evening filled with dance, drama, and music performances
-                by our talented students.
+                Experience a night of vibrant performances, from classical Bharatanatyam
+                to modern Bollywood. This cultural fest showcases student talent across
+                dance, drama, and music.
             </p>
 
-            <img src="logo/rhythms-of-india.png" alt="Cultural Event" width="160">
+            <br>
+
+            <p>
+                The event also features regional food stalls, art exhibits, and traditional
+                games to celebrate diversity.
+            </p>
 
         </article>
 
@@ -96,14 +276,23 @@
 
             <h3>Green Campus Drive</h3>
 
-            <p>Date: September 10, 2025</p>
+            <img src="logo/green-campus.png" alt="Green Campus Drive">
+
+            <p class="date">Date: September 10, 2025</p>
 
             <p>
-                A community initiative promoting sustainability through
-                tree plantation and awareness campaigns.
+                Join us for a day dedicated to sustainability and eco-awareness.
+                Volunteers will plant trees across the campus and participate
+                in clean-up drives and awareness rallies.
             </p>
 
-            <img src="logo/green-campus.png" alt="Green Campus Drive" width="160">
+            <br>
+
+            <p>
+                Workshops on recycling, composting, and green tech will run
+                throughout the day. Participants will receive a sustainability
+                starter kit.
+            </p>
 
         </article>
 
@@ -115,13 +304,44 @@
 
         <h2>Contact Us</h2>
 
-        <p>Email: eventdesk@ourcollege.edu</p>
+        <p><strong>Campus Name:</strong> Aurelia Institute of Technology</p>
+
+        <p><strong>Office Location:</strong> Room 212, Student Affairs Block,
+            Aurelia Main Campus</p>
+
+        <p><strong>Email:</strong>
+            <a href="#">eventdesk@aureliacampus.edu</a>
+        </p>
+
+        <p><strong>Phone:</strong> +91-9876543210 (Mon–Fri, 10 AM – 5 PM)</p>
 
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
 
     <footer>
+
+        <ul>
+
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+
+        </ul>
 
         <p>&copy; 2025 CollegeEventDesk</p>
 
