@@ -5,12 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CollegeEventDesk</title>
-
-    <!-- Font Awesome Icons -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>FoodieFrenzy</title>
 
     <style>
 
@@ -18,148 +13,122 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body{
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fefae0;
+            background-color: #f5efe8;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            background-color: #ff6f61;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .hero h1{
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p{
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .btn{
+            display: inline-block;
+            background-color: white;
+            color: #ff6f61;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background-color: #ffe5e0;
+        }
+
+        /* Popular Dishes */
+
+        .dishes{
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .dishes h2{
+            font-size: 40px;
+            color: #7a4e3a;
+            margin-bottom: 40px;
+        }
+
+        .dish-container{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .dish-card{
+            background-color: white;
+            width: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .dish-card img{
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .dish-card h3{
+            margin: 15px 0 10px;
             color: #333;
         }
 
-        /* Header */
-
-        header{
-            background-color: #2a9d8f;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        header h1{
-            color: white;
-            font-size: 55px;
-            margin-bottom: 20px;
-        }
-
-        header p{
-            color: #f1f1f1;
-            font-style: italic;
+        .dish-card a{
+            display: inline-block;
             margin-bottom: 15px;
-        }
-
-        header img{
-            width: 90px;
-            border-radius: 10px;
-        }
-
-        /* Navigation */
-
-        nav{
-            background-color: #264653;
-            padding: 15px;
-        }
-
-        nav ul{
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        nav ul li{
-            margin: 0 20px;
-        }
-
-        nav ul li a{
-            color: white;
+            color: #ff6f61;
             text-decoration: none;
             font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
         }
 
-        nav ul li a:hover{
-            background-color: #f4a261;
-            color: black;
-        }
-
-        /* Sections */
-
-        section{
-            width: 70%;
-            margin: 25px auto;
-            background-color: white;
-            padding: 25px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        section h2{
-            color: #264653;
-            margin-bottom: 20px;
-        }
-
-        /* Event Cards */
-
-        article{
-            background-color: #fff5ec;
-            border-left: 5px solid #e76f51;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        article h3{
-            color: #2a9d8f;
-            margin-bottom: 10px;
-        }
-
-        article img{
-            width: 200px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin: 10px 0;
-        }
-
-        .date{
-            font-style: italic;
-            color: gray;
-            margin-bottom: 10px;
-        }
-
-        /* Contact Section */
-
-        #contact p{
-            margin-bottom: 15px;
+        .dish-card a:hover{
+            color: #d94f45;
         }
 
         /* Footer */
 
         footer{
-            background-color: #264653;
+            background-color: #333;
+            color: white;
             text-align: center;
-            padding: 15px;
-            color: white;
-        }
-
-        footer ul{
-            list-style: none;
-            margin-bottom: 10px;
-        }
-
-        footer ul li{
-            display: inline;
-            margin: 0 15px;
-        }
-
-        footer ul li a{
-            color: white;
-            font-size: 22px;
-        }
-
-        footer ul li a:hover{
-            color: yellow;
+            padding: 40px 20px;
         }
 
         footer p{
-            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .top-btn{
+            display: inline-block;
+            background-color: #ff6f61;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .top-btn:hover{
+            background-color: #ff4f40;
         }
 
     </style>
@@ -168,152 +137,87 @@
 
 <body>
 
-    <!-- Header Section -->
+    <!-- Hero Section -->
 
-    <header>
+    <section class="hero" id="top">
 
-        <h1>CollegeEventDesk</h1>
+        <h1>Craving Something Desi?</h1>
 
-        <p>Your One-Stop Campus Event Hub</p>
+        <p>India's Street Flavours Delivered Fast</p>
 
-        <img src="logo/aurelea .jpeg" alt="College Logo">
-
-    </header>
-
-    <!-- Navigation Menu -->
-
-    <nav>
-
-        <ul>
-
-            <li><a href="#about">About</a></li>
-
-            <li><a href="#events">Events</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-        </ul>
-
-    </nav>
-
-    <!-- About Section -->
-
-    <section id="about">
-
-        <h2>Discover CollegeEventDesk</h2>
-
-        <p>
-            CollegeEventDesk is a student-initiated platform created to keep everyone informed
-            about what's happening on campus. From tech talks to cultural fests, this website
-            helps students discover upcoming events and stay engaged with campus life.
-            All event details are organized clearly so you never miss out on opportunities
-            to participate, perform, or volunteer.
-        </p>
+        <a href="#popular" class="btn">Order Now</a>
 
     </section>
 
-    <!-- Upcoming Events Section -->
+    <!-- Popular Dishes -->
 
-    <section id="events">
+    <section class="dishes" id="popular">
 
-        <h2>Upcoming Events</h2>
+        <h2>Popular Dishes</h2>
 
-        <p>Stay tuned for more details and event activities!</p>
+        <div class="dish-container">
 
-        <!-- Event 1 -->
+            <!-- Dish 1 -->
 
-        <article>
+            <div class="dish-card">
 
-            <h3>Tech Talk: AI in Everyday Life</h3>
+                <img src="logo/pav-bhaji.png" alt="Pav Bhaji">
 
-            <img src="logo/ai-in-everyday-life.png" alt="AI Event">
+                <h3>Pav Bhaji</h3>
 
-            <p class="date">Date: August 15, 2025</p>
+                <a href="#top">Order Now</a>
 
-            <p>
-                Discover how artificial intelligence is shaping industries such as healthcare,
-                transportation, and education. This session will cover real-world applications
-                and spark discussions on ethical AI usage.
-            </p>
+            </div>
 
-            <br>
+            <!-- Dish 2 -->
 
-            <p>
-                Industry experts will also share insights into how students can prepare for
-                careers in AI and machine learning.
-            </p>
+            <div class="dish-card">
 
-        </article>
+                <img src="logo/vada-pav.png" alt="Vada Pav">
 
-        <!-- Event 2 -->
+                <h3>Vada Pav</h3>
 
-        <article>
+                <a href="#top">Order Now</a>
 
-            <h3>Cultural Fest: Rhythms of India</h3>
+            </div>
 
-            <img src="logo/rhythms-of-india.png" alt="Cultural Event">
+            <!-- Dish 3 -->
 
-            <p class="date">Date: August 20, 2025</p>
+            <div class="dish-card">
 
-            <p>
-                Experience a night of vibrant performances, from classical Bharatanatyam
-                to modern Bollywood. This cultural fest showcases student talent across
-                dance, drama, and music.
-            </p>
+                <img src="logo/masala-dosa.png" alt="Masala Dosa">
 
-            <br>
+                <h3>Masala Dosa</h3>
 
-            <p>
-                The event also features regional food stalls, art exhibits, and traditional
-                games to celebrate diversity.
-            </p>
+                <a href="#top">Order Now</a>
 
-        </article>
+            </div>
 
-        <!-- Event 3 -->
+            <!-- Dish 4 -->
 
-        <article>
+            <div class="dish-card">
 
-            <h3>Green Campus Drive</h3>
+                <img src="logo/chole-bature.png" alt="Chole Bhature">
 
-            <img src="logo/green-campus.png" alt="Green Campus Drive">
+                <h3>Chole Bhature</h3>
 
-            <p class="date">Date: September 10, 2025</p>
+                <a href="#top">Order Now</a>
 
-            <p>
-                Join us for a day dedicated to sustainability and eco-awareness.
-                Volunteers will plant trees across the campus and participate
-                in clean-up drives and awareness rallies.
-            </p>
+            </div>
 
-            <br>
+            <!-- Dish 5 -->
 
-            <p>
-                Workshops on recycling, composting, and green tech will run
-                throughout the day. Participants will receive a sustainability
-                starter kit.
-            </p>
+            <div class="dish-card">
 
-        </article>
+                <img src="logo/pani-puri.png" alt="Pani Puri">
 
-    </section>
+                <h3>Pani Puri</h3>
 
-    <!-- Contact Section -->
+                <a href="#top">Order Now</a>
 
-    <section id="contact">
+            </div>
 
-        <h2>Contact Us</h2>
-
-        <p><strong>Campus Name:</strong> Aurelia Institute of Technology</p>
-
-        <p><strong>Office Location:</strong> Room 212, Student Affairs Block,
-            Aurelia Main Campus</p>
-
-        <p><strong>Email:</strong>
-            <a href="#">eventdesk@aureliacampus.edu</a>
-        </p>
-
-        <p><strong>Phone:</strong> +91-9876543210 (Mon–Fri, 10 AM – 5 PM)</p>
+        </div>
 
     </section>
 
@@ -321,29 +225,9 @@
 
     <footer>
 
-        <ul>
+        <p>Ready for your Desi Feast?</p>
 
-            <li>
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </li>
-
-        </ul>
-
-        <p>&copy; 2025 CollegeEventDesk</p>
+        <a href="#top" class="top-btn">Back to Top</a>
 
     </footer>
 
