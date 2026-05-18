@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeEventDesk - Events</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body{
+            background-color:#f4f0d8;
+        }
+
+        /* Navbar */
+        .navbar{
+            background:#198754;
+            padding:15px 0;
+        }
+
+        .navbar-brand{
+            color:white !important;
+            font-weight:bold;
+            font-size:24px;
+        }
+
+        .tagline{
+            color:white;
+            font-style:italic;
+            font-size:14px;
+        }
+
+        .nav-link{
+            color:white !important;
+            font-weight:600;
+        }
+
+        /* Card/Form */
+        .event-form{
+            background:white;
+            border-radius:8px;
+            padding:25px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            color:#198754;
+            font-weight:bold;
+        }
+
+        .table-title{
+            color:#198754;
+            font-weight:bold;
+            margin-top:40px;
+            margin-bottom:20px;
+        }
+
+        table{
+            background:white;
+        }
+
+        thead{
+            background:#d7ebe4;
+        }
+
+        footer{
+            background:#1d2127;
+            color:white;
+            padding:18px 0;
+            margin-top:50px;
+        }
+
+        .social-icons a{
+            color:white;
+            margin-left:15px;
+            font-size:22px;
+        }
+
+        @media(max-width:768px){
+            .navbar-brand{
+                font-size:18px;
+            }
+
+            .tagline{
+                font-size:12px;
+            }
+
+            h2{
+                font-size:28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+        <div>
+            <a class="navbar-brand" href="index.html">
+                CollegeEventDesk
+            </a>
+            <div class="tagline">
+                Your One-Stop Campus Event Hub
+            </div>
+        </div>
+
+        <button class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+            ☰
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        Events
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container py-5">
+
+    <!-- Heading -->
+    <h2 class="mb-4">
+        Add a New Event
+    </h2>
+
+    <!-- Event Form -->
+    <div class="event-form">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">
+                    Event Name
+                </label>
+
+                <select class="form-select">
+                    <option>Select Event</option>
+                    <option>AI Tech Talk</option>
+                    <option>Startup Showcase</option>
+                    <option>Rhythms of India Fest</option>
+                    <option>Green Campus Drive</option>
+                    <option>Design Portfolio Expo</option>
+                    <option>Inter-College Quiz Bowl</option>
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">
+                    Eligible Year
+                </label>
+
+                <select class="form-select">
+                    <option>Select Year</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>Final Year</option>
+                    <option>All Years</option>
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">
+                    Date of Event
+                </label>
+
+                <input type="date" class="form-control">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">
+                    Organized By
+                </label>
+
+                <input type="text"
+                    class="form-control"
+                    placeholder="e.g. CSI Club, Cultural Committee">
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label class="form-label">
+                    Max Participation
+                </label>
+
+                <input type="number"
+                    class="form-control"
+                    placeholder="Enter maximum">
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label class="form-label">
+                    Venue
+                </label>
+
+                <input type="text"
+                    class="form-control"
+                    placeholder="e.g. Auditorium A">
+            </div>
+
+        </div>
+
+        <button class="btn btn-success px-4">
+            Submit
+        </button>
+
+    </div>
+
+    <!-- Event Table -->
+    <h3 class="table-title">
+        🔍 Explore Full List of Annual Events for 2025
+    </h3>
+
+    <div class="table-responsive" id="eventTable">
+
+        <table class="table table-bordered text-center align-middle">
+
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event Name</th>
+                    <th>Eligible Year</th>
+                    <th>Organized By</th>
+                    <th>Spots Left</th>
+                    <th>Venue</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>2025-01-12</td>
+                    <td>AI Tech Talk</td>
+                    <td>3rd Year</td>
+                    <td>CSI Club</td>
+                    <td>100</td>
+                    <td>Auditorium A</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">
+                            Register
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Unregister
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2025-02-04</td>
+                    <td>Startup Showcase</td>
+                    <td>All Years</td>
+                    <td>Management</td>
+                    <td>50</td>
+                    <td>Main Hall</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">
+                            Register
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Unregister
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2025-03-18</td>
+                    <td>Rhythms of India Fest</td>
+                    <td>All Years</td>
+                    <td>Humanities</td>
+                    <td>200</td>
+                    <td>Open Grounds</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">
+                            Register
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Unregister
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2025-07-09</td>
+                    <td>Green Campus Drive</td>
+                    <td>1st & 2nd Year</td>
+                    <td>Environmental Sciences</td>
+                    <td>70</td>
+                    <td>Campus Lawns</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">
+                            Register
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Unregister
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2025-10-01</td>
+                    <td>Design Portfolio Expo</td>
+                    <td>Final Year</td>
+                    <td>Dept. of Design</td>
+                    <td>60</td>
+                    <td>Studio Hall</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">
+                            Register
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Unregister
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2025-08-22</td>
+                    <td>Inter-College Quiz Bowl</td>
+                    <td>2nd & 3rd Year</td>
+                    <td>Quiz Club</td>
+                    <td>40</td>
+                    <td>Conference Room</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">
+                            Register
+                        </button>
+
+                        <button class="btn btn-danger btn-sm">
+                            Unregister
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <div>
+            © 2025 CollegeEventDesk. All rights reserved.
+        </div>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+x
+</body>
+</html>
