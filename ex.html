@@ -11,23 +11,21 @@
 
     <script>
 
-        // Function to calculate average score
+        // Function Definition
         function calculateAverageScore(score1, score2, score3) {
 
-            let average = (score1 + score2 + score3) / 3;
+            const average = (score1 + score2 + score3) / 3;
 
             return average;
         }
 
-        // First participant scores
-        let average1 = calculateAverageScore(85, 90, 80);
+        // Function Usage
+        const avg1 = calculateAverageScore(85, 90, 80);
+        const avg2 = calculateAverageScore(70, 75, 65);
 
-        // Second participant scores
-        let average2 = calculateAverageScore(70, 75, 65);
-
-        // Display result
-        console.log("Average Score of Participant Set 1: " + average1);
-        console.log("Average Score of Participant Set 2: " + average2);
+        // Output Display
+        console.log("Average score for participant set 1:", avg1);
+        console.log("Average score for participant set 2:", avg2);
 
     </script>
 
