@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Participant ID</title>
+</head>
+<body>
+
+    <h1>Exercise 2: Validate Participant ID</h1>
+
+    <script>
+
+        // Hardcoded participant ID
+        let participantID = 1234;
+
+        // Copy ID to another variable
+        let tempID = participantID;
+
+        // Variable to count digits
+        let count = 0;
+
+        // do...while loop
+        do {
+
+            tempID = Math.floor(tempID / 10);
+            count++;
+
+        } while (tempID > 0);
+
+        // Display total digit count
+        console.log("Participant ID: " + participantID);
+        console.log("Total Digits: " + count);
+
+        // Validate ID
+        if (count >= 4) {
+            console.log("Valid Participant ID");
+        } else {
+            console.log("Invalid Participant ID");
+        }
+
+    </script>
+
+</body>
+</html>
