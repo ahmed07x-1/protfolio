@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 4 - Welcome Message</title>
+    <title>Exercise 5 - Average Score</title>
 </head>
 <body>
 
-    <h1>Exercise 4: Display Customized Welcome Message</h1>
+    <h1>Exercise 5: Calculate Average Score</h1>
 
     <script>
 
-        // Function Definition
-        function displayWelcomeMessage(participantName) {
+        // Function to calculate average score
+        function calculateAverageScore(score1, score2, score3) {
 
-            console.log("Welcome, " + participantName + "! Ready for the fun?");
+            let average = (score1 + score2 + score3) / 3;
+
+            return average;
         }
 
-        // Function Call for 3 Participants
-        displayWelcomeMessage("Ahmed");
-        displayWelcomeMessage("Mohd Younus");
-        displayWelcomeMessage("Ayesha");
+        // First participant scores
+        let average1 = calculateAverageScore(85, 90, 80);
+
+        // Second participant scores
+        let average2 = calculateAverageScore(70, 75, 65);
+
+        // Display result
+        console.log("Average Score of Participant Set 1: " + average1);
+        console.log("Average Score of Participant Set 2: " + average2);
 
     </script>
 
