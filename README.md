@@ -1,4 +1,4 @@
-# s-6 ex-2 web
+# s-6 ex-3 web
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin http://myrepos.stackroute.niit.com/1968752_Mohd/s-6-ex-2-web.git
+git remote add origin http://myrepos.stackroute.niit.com/1968752_Mohd/s-6-ex-3-web.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](http://myrepos.stackroute.niit.com/1968752_Mohd/s-6-ex-2-web/-/settings/integrations)
+- [ ] [Set up project integrations](http://myrepos.stackroute.niit.com/1968752_Mohd/s-6-ex-3-web/-/settings/integrations)
 
 ## Collaborate with your team
 
