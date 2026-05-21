@@ -3,38 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Participant ID</title>
+    <title>Exercise 4 - Welcome Message</title>
 </head>
 <body>
 
-    <h1>Exercise 3: Determine Whether a Participant ID is Prime</h1>
+    <h1>Exercise 4: Display Customized Welcome Message</h1>
 
     <script>
 
-        // Hardcoded participant ID
-        let participantID = 47;
+        // Function Definition
+        function displayWelcomeMessage(participantName) {
 
-        // Assume ID is prime
-        let isPrime = true;
-
-        // Check divisors from 2 to square root of ID
-        for (let i = 2; i <= Math.sqrt(participantID); i++) {
-
-            if (participantID % i === 0) {
-                isPrime = false;
-                break;
-            }
-
+            console.log("Welcome, " + participantName + "! Ready for the fun?");
         }
 
-        // Display result
-        console.log("Participant ID: " + participantID);
-
-        if (isPrime) {
-            console.log("The Participant ID is Prime (Lucky ID)");
-        } else {
-            console.log("The Participant ID is Not Prime");
-        }
+        // Function Call for 3 Participants
+        displayWelcomeMessage("Ahmed");
+        displayWelcomeMessage("Mohd Younus");
+        displayWelcomeMessage("Ayesha");
 
     </script>
 
