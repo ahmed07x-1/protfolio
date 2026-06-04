@@ -372,6 +372,7 @@
       ],
       "total": "1360",
       "id": "kBtrbauEW8s"
+<<<<<<< HEAD
     },
     {
       "customerName": "Mohd Younus",
@@ -470,6 +471,8 @@
       ],
       "total": "1250",
       "id": "yWDUHjWjkxc"
+=======
+>>>>>>> a67e3425abfec1a3fda009a0cc7858aeb11c76b7
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
