@@ -372,7 +372,6 @@
       ],
       "total": "1360",
       "id": "kBtrbauEW8s"
-<<<<<<< HEAD
     },
     {
       "customerName": "Mohd Younus",
@@ -471,8 +470,45 @@
       ],
       "total": "1250",
       "id": "yWDUHjWjkxc"
-=======
->>>>>>> a67e3425abfec1a3fda009a0cc7858aeb11c76b7
+    },
+    {
+      "customerName": "Mohd Younus",
+      "phone": "9804418333",
+      "address": "TTTT",
+      "items": [
+        {
+          "id": "8",
+          "name": "Mojito",
+          "category": "Drinks",
+          "price": 130,
+          "description": "Refreshing mango mojito",
+          "image": "images/MOJITO.webp",
+          "tag": "Fresh",
+          "quantity": 3
+        },
+        {
+          "id": "7",
+          "name": "French Fries",
+          "category": "Starter",
+          "price": 100,
+          "description": "Crispy golden fries",
+          "image": "images/french fries.webp",
+          "tag": "Popular",
+          "quantity": 2
+        },
+        {
+          "id": "9",
+          "name": "Chocolate Cake",
+          "category": "Dessert",
+          "price": 150,
+          "description": "Rich chocolate layered cake",
+          "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+          "tag": "Sweet",
+          "quantity": 3
+        }
+      ],
+      "total": "1040",
+      "id": "nZffmWm"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
