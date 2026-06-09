@@ -72,7 +72,6 @@ sections.forEach((section) => {
     observer.observe(section);
 });
 
-const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
 
 window.addEventListener("scroll", () => {
